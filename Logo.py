@@ -1,6 +1,7 @@
-from telethon import events, Button
 import os 
 from PIL import Image, ImageDraw, ImageFont
+from telethon import TelegramClient
+from telethon import events, Button
 import shutil 
 import random, re
 import glob
@@ -9,7 +10,7 @@ from telethon.tl.types import InputMessagesFilterPhotos
 api_id = os.environ.get("APP_ID")
 api_hash = os.environ.get("API_HASH")
 token = os.environ.get("BOT_TOKEN")
-client = TelegramClient('mrunal', api_id, api_hash).start(bot_token=token)
+mrunal = TelegramClient('mrunal', api_id, api_hash).start(bot_token=token)
 
 
 BGS = ["resources/11.jpg", 
@@ -21,7 +22,7 @@ BGS = ["resources/11.jpg",
                          
                          
 
-@client.on(events.NewMessage(incoming=True, pattern="/logo"))
+@mrunal.on(events.NewMessage(incoming=True, pattern="/logo"))
 async def lego(event):
  quew = event.text.split("",1)[1]
  #quew = event.text.split[1]
@@ -53,7 +54,7 @@ async def lego(event):
     draw.text((x, y), text, font=font, fill="black", stroke_width=25, stroke_fill="yellow")
     fname2 = "LogoBy.png"
     img.save(fname2, "png")
-    await client.send_file(event.chat_id, fname2, caption="Made By LoGo Maker Bot")
+    await mrunal.send_file(event.chat_id, fname2, caption="Made By LoGo Maker Bot")
     if os.path.exists(fname2):
             os.remove(fname2)
  except Exception as e:
