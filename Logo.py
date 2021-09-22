@@ -25,10 +25,10 @@ import glob
 import time
 from telethon.tl.types import InputMessagesFilterPhotos
 
-BGS = ["resources/bgsrnd/11.jpg", 
-       "resources/bgsrnd/12.jpg", 
-       "resources/bgsrnd/13.jpg", 
-       "resources/bgsrnd/15.jpg"
+BGS = ["resources/11.jpg", 
+       "resources/12.jpg", 
+       "resources/13.jpg", 
+       "resources/15.jpg"
       ]
  
                          
@@ -66,8 +66,8 @@ async def lego(event):
     draw.text((x, y), text, font=font, fill="black", stroke_width=25, stroke_fill="yellow")
     fname2 = "LogoBy.png"
     img.save(fname2, "png")
-    await client.send_file(event.chat_id, fname2, caption="Made By MultiFunctionBot")
+    await client.send_file(event.chat_id, fname2, caption="Made By LoGo Maker Bot")
     if os.path.exists(fname2):
             os.remove(fname2)
  except Exception as e:
-   await event.reply(f'Error Report @SouGuu, {e}')
+   await event.reply(f'Error Report @Godmrunal, {e}')
