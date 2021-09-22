@@ -1,23 +1,3 @@
-  
-
-import os, asyncio
-os.system("pip install Telethon==1.21.1")
-
-from telethon import TelegramClient, events, functions, types
-
-os.system("pip install Telethon==1.21.1")
-
-api_id = os.environ.get("APP_ID")
-
-
-
-from os import system
-
-api_hash = os.environ.get("API_HASH")
-
-token = os.environ.get("BOT_TOKEN")
-
-client = TelegramClient('mrunal', api_id, api_hash).start(bot_token=token)
 from telethon import events, Button
 import os 
 from PIL import Image, ImageDraw, ImageFont
@@ -26,6 +6,11 @@ import random, re
 import glob
 import time
 from telethon.tl.types import InputMessagesFilterPhotos
+api_id = os.environ.get("APP_ID")
+api_hash = os.environ.get("API_HASH")
+token = os.environ.get("BOT_TOKEN")
+client = TelegramClient('mrunal', api_id, api_hash).start(bot_token=token)
+
 
 BGS = ["resources/11.jpg", 
        "resources/12.jpg", 
