@@ -1,28 +1,28 @@
 {
-    "name": "LEGENDX BOT",
-    "description": "A bot CAN DO ANYTHING",
+    "name": "Logo BOT",
+    "description": "A bot CAN make logo ",
     "logo": "",
     "keywords": [
         "TELETHON",
-        "X ARMY",
+        "op",
         "Telegram Bot",
         "piro bolte",
-        "LEGENDX22"
+        "Godmrunal"
     ],
     "website": "",
-    "success_url": "https://telegram.dog/LEGENDX22",
+    "success_url": "https://telegram.dog/Godmrunal",
     "env": {
         "BOT_TOKEN": {
             "description": "You Telegram Bot Token from @BotFather",
-            "value": ""
+            "value": "2017415318:AAGaUAfiCydXKJfJykCB4VZucyiAjcXtBAo"
         },
         "API_HASH": {
             "description": "Your API Hash from my.telegram.org",
-            "value": ""
+            "value": "aaf08fb05d141da368c024c00afcf3f1"
         },
         "APP_ID": {
             "description": "Your API ID from my.telegram.org",
-            "value": ""
+            "value": "7515583"
         }
     },
     "addons": [],
